@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untukmu di Hari Valentine</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            text-align: center;
+            padding: 50px;
+            color: white;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            display: inline-block;
+            max-width: 500px;
+        }
+        h1 {
+            color: #d63384;
+            font-size: 26px;
+        }
+        p {
+            color: #444;
+            font-size: 18px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #ff4b8b;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #ff2a6d;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            text-align: center;
+            max-width: 90%;  /* Maksimal lebar 90% dari layar */
+            width: auto;
+            height: auto;
+        }
+        .popup img {
+            width: 100%;  /* Gambar mengikuti lebar popup */
+            height: auto; /* Agar gambar tetap proporsional */
+            border-radius: 10px;
+        }
+        .close {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background: #ff4b8b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none; /* Tombol tutup disembunyikan sementara */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Untuk Kamu, yang Selalu di Hatiku ❤️</h1>
+        <p>Selamat Hari Valentine...</p>
+        <p>Aku tahu aku bukan yang terbaik, tapi aku ingin berubah.</p>
+        <p>Aku ingin menjadi versi terbaik dari diriku, untuk masa depan yang lebih baik.</p>
+        <p>Aku tak meminta kamu langsung percaya, tapi aku ingin kamu tahu bahwa aku serius.</p>
+        <p>Apapun yang terjadi, aku selalu mendoakan kebahagiaanmu. 💕</p>
+        <button class="btn" onclick="openPopup()">Klik di sini untuk mengenang</button>
+    </div>
+    
+    <div class="popup" id="popup">
+        <h2>Kenangan Kita</h2>
+        <img src="FOTO2.jpeg" alt="Kenangan" id="popupImage">
+        <p>Terima kasih atas setiap momen indah yang pernah kita bagi.</p>
+        <button class="close" id="closeBtn" onclick="closePopup()">Tutup</button>
+    </div>
+    
+    <script>
+        function openPopup() {
+            document.getElementById("popup").style.display = "block";
+            document.getElementById("closeBtn").style.display = "none"; // Sembunyikan tombol tutup sementara
+            
+            let image = document.getElementById("popupImage");
+            image.onload = function() {
+                document.getElementById("closeBtn").style.display = "block"; // Tampilkan tombol setelah gambar dimuat
+            };
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+</body>
+</html>
